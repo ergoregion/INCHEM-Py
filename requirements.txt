@@ -6,3 +6,4 @@ scipy
 threadpoolctl
 matplotlib
 pytest
+dill
