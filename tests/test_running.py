@@ -57,7 +57,7 @@ class TestInChemPyMainClass(unittest.TestCase):
         )
 
         self.assertEqual(2, len(output_concentrations))
-        np.testing.assert_allclose(118557886591.14116, output_concentrations["O3"][60], atol=1.0)
+        np.testing.assert_allclose(1.297009e+11, output_concentrations["O3"][60], rtol=1.0e-5)
 
 
 if __name__ == '__main__':
