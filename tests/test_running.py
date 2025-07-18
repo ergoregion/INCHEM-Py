@@ -1,6 +1,6 @@
 import unittest
 from modules.inchem_main_class import InChemPyMainClass
-from .default_test_settings import DefaultTestSettings
+from tests.default_test_settings import DefaultTestSettings
 
 
 class TestInChemPyMainClass(unittest.TestCase):
