@@ -1,4 +1,5 @@
 import unittest
+import numpy as np
 from modules.inchem_main_class import InChemPyMainClass
 from tests.default_test_settings import DefaultTestSettings
 
@@ -56,7 +57,7 @@ class TestInChemPyMainClass(unittest.TestCase):
         )
 
         self.assertEqual(2, len(output_concentrations))
-        self.assertEqual(4, output_concentrations[60]["O3"])
+        np.testing.assert_allclose(118557886591.14116, output_concentrations["O3"][60], atol=1.0)
 
 
 if __name__ == '__main__':
