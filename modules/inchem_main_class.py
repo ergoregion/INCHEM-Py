@@ -536,7 +536,7 @@ class InChemPyMainClass:
                 iters = iters+1
                 ret = r.get_return_code()
                 if iters % save_rate == 0:  # output every save_rate iterations
-                    dt_out.append(int(r.t))
+                    dt_out.append(r.t)
                     iter_time.append(timing.time()-start_time)
                     calculated_output['RO2'].append(density_dict["RO2"])
                     reactivity_calc(reactivity_dict, reactivity_compiled, reaction_rate_dict,
@@ -851,7 +851,7 @@ class InChemPyMainClass:
         # Create arrays for storing the output.
         n_new = np.array([[y0[i]] for i in range(num_species)])
         dt_out = np.array([])
-        dt_out = np.append(dt_out, int(t0))
+        dt_out = np.append(dt_out, t0)
         iter_time_tot = [timing.time()-start_time]
         calculated_output_tot = {}
         calculated_output_tot['RO2'] = [density_dict['RO2']]
