@@ -851,7 +851,7 @@ class InChemPyMainClass:
         # Create arrays for storing the output.
         n_new = np.array([[y0[i]] for i in range(num_species)])
         dt_out = np.array([])
-        dt_out = np.append(dt_out, int(t0))
+        dt_out = np.append(dt_out, t0)
         iter_time_tot = [timing.time()-start_time]
         calculated_output_tot = {}
         calculated_output_tot['RO2'] = [density_dict['RO2']]
