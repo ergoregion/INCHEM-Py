@@ -536,7 +536,7 @@ class InChemPyMainClass:
                 iters = iters+1
                 ret = r.get_return_code()
                 if iters % save_rate == 0:  # output every save_rate iterations
-                    dt_out.append(int(r.t))
+                    dt_out.append(r.t)
                     iter_time.append(timing.time()-start_time)
                     calculated_output['RO2'].append(density_dict["RO2"])
                     reactivity_calc(reactivity_dict, reactivity_compiled, reaction_rate_dict,
